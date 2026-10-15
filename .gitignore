@@ -19,3 +19,5 @@ Thumbs.db
 id_*
 deploy_key
 deploy_key.pub
+
+ssh_key.env
