@@ -6,7 +6,7 @@
 #  - Sinh viên điền các ô ______ tại các dòng TODO trong service "app" và "nginx".
 #  - Chạy:  docker compose --env-file student.env up -d --build
 # =============================================================================
-name: ${COMPOSE_PROJECT_NAME:?Chua dien COMPOSE_PROJECT_NAME trong student.env}
+#name: ${COMPOSE_PROJECT_NAME:?Chua dien COMPOSE_PROJECT_NAME trong student.env}
 
 services:
   # ---------------------------------------------------------------- MySQL (CÓ SẴN)
@@ -66,7 +66,7 @@ services:
     restart: unless-stopped
     # TODO 4: publish cổng cá nhân APP_PORT (trong student.env) ra cổng 80 của container
     ports:
-      - "${APP_PORT:_}:80"
+      - "${APP_PORT}:80"
     # TODO 5: mount (read-only)  nginx/default.conf -> /etc/nginx/conf.d/default.conf
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
