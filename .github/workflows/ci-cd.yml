@@ -112,11 +112,7 @@ jobs:
           # TODO 5: kết nối bằng các GitHub Secrets SERVER_HOST, SERVER_USER, SERVER_SSH_KEY
           host: 221.121.3.201
           username: devuser
-          key: b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
-              QyNTUxOQAAACCb/paBJoGwMwMDB8cePsCbcXMX0FL5vYrgzdY/PmGWpwAAAKDhYNgX4WDY
-              FwAAAAtzc2gtZWQyNTUxOQAAACCb/paBJoGwMwMDB8cePsCbcXMX0FL5vYrgzdY/PmGWpw
-              AAAECvT1WYE9ksHqV5bTjEjVuuG1sBKKg7Osj70uVR+tPx+5v+loEmgbAzAwMHxx4+wJtx
-              cxfQUvm9iuDN1j8+YZanAAAAGmdpdGh1Yi1hY3Rpb25zLWt0cmEtZGVwbG95AQID
+          key: ${{ secrets.SERVER_SSH_KEY }}
           envs: APP_IMAGE,APP_TAG,GHCR_USER,GHCR_TOKEN,REPO_URL,DEPLOY_DIR
           script: |
             set -e
